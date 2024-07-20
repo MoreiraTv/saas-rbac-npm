@@ -37,7 +37,7 @@ export async function createAccount(app: FastifyInstance) {
       const autoJoinOrganization = await prisma.organization.findFirst({
         where: {
           domain,
-          shouldAttachUserByDomain: true,
+          shouldAttachUsersByDomain: true,
         },
       })
 
